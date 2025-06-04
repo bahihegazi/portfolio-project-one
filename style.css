@@ -128,9 +128,16 @@ a {
     }
 }
 
+.home {
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .home-info p {
     font-size: 16px;
     margin: 10px 0 25px;
+    max-width: 800px;
 }
 
 .home-info .btn-sci {
@@ -253,5 +260,100 @@ a {
 @keyframes show-bars {
     100% {
         transform: translateY(0%);
+    }
+}
+
+@media (max-width: 1920px) {
+    .home-img .img-box {
+        width: 26vw;
+        height: 26vw;
+    }
+}
+
+@media (max-width: 1100px) {
+    .home-img .img-box {
+        width: 30vw;
+        height: 30vw;
+    }
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .home-info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .home-info p {
+        line-height: 2;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar .logo {
+        margin-bottom: 10px;
+    }
+    .navbar ul li {
+        margin-left: 0;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 528px) {
+    .home-img .img-box {
+        margin-top: 10px;
+        width: 50vw;
+        height: 50vw;
+    }
+    .navbar ul li {
+        margin-left: 0;
+        padding: 0 10px;
+    }
+    .navbar ul li a {
+        font-size: 18px;
+    }
+    .home-info h1 {
+        font-size: 50px;
+    }
+    .home-info h2 {
+        font-size: 26px;
+    }
+    .btn-sci {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .home-info .btn-sci .sci {
+        margin-left: 0;
+        margin-top: 25px;
+    }
+    .home-img {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 430px) {
+    .navbar ul li a {
+        font-size: 14px;
+    }
+    .home-img .img-box {
+        margin-top: 20px;
+        width: 50vw;
+        height: 50vw;
+    }
+    .home-info h1 {
+        font-size: 35px;
+    }
+    .home-info h2 {
+        font-size: 20px;
+    }
+    .home-info p {
+        line-height: 2;
+        font-size: 14px;
     }
 }
